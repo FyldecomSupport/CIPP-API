@@ -20,6 +20,9 @@ Function Invoke-ListTeamsActivity {
     @{ Name = 'TeamsChat'; Expression = { $_.'Team Chat Message Count' } },
     @{ Name = 'CallCount'; Expression = { $_.'Call Count' } },
     @{ Name = 'MeetingCount'; Expression = { $_.'Meeting Count' } }
+    @{ Name = 'TeamsPrivateChat'; Expression = { $_.'privateChatMessageCount' }
+                         
+                        
 
     # Associate values to output bindings by calling 'Push-OutputBinding'.
     Push-OutputBinding -Name Response -Value ([HttpResponseContext]@{
