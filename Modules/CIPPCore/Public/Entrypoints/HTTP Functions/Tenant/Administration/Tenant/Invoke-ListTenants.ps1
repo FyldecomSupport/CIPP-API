@@ -67,7 +67,7 @@ Function Invoke-ListTenants {
         }
     }
 
-    Push-OutputBinding -Name Response -Value ([HttpResponseContext]@{
+    Push-OutputBinding -Name Response -Clobber -Value ([HttpResponseContext]@{
             StatusCode = [HttpStatusCode]::OK
             Body       = @($Body)
         })
